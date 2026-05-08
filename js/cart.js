@@ -207,7 +207,7 @@ function renderCart() {
   }
 
   if (cart.length === 0) {
-    el.innerHTML = '<p class="cart-empty">🛒 Your basket is empty.<br>Add items from the menu below.</p>';
+    el.innerHTML = '<p class="cart-empty">Your basket is empty.<br>Add items from the menu below.</p>';
     if (checkoutBtn) checkoutBtn.disabled = true;
     return;
   }
@@ -338,8 +338,8 @@ function showSuccess(name, phone, total) {
   if (panel) {
     panel.innerHTML = `
       <div class="order-success">
-        <div class="tick">✅</div>
-        <h3>Order Received!</h3>
+        <div class="tick">Order Received</div>
+        <h3>Thank you!</h3>
         <p>Thank you, <strong>${name}</strong>! We'll call you on <strong>${phone}</strong> to confirm your order.</p>
         <p style="margin-top:10px;">Order total: <strong>${total}</strong></p>
       </div>`;
