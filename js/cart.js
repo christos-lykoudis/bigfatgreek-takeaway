@@ -192,6 +192,20 @@ function renderCart() {
   if (badge)   badge.textContent = count;
   if (totalEl) totalEl.textContent = '£' + cartTotal().toFixed(2);
 
+  // Update mobile cart bar
+  const mobileBar      = document.getElementById('mobile-cart-bar');
+  const mobileCount    = document.getElementById('mobile-cart-count');
+  const mobileTotalBar = document.getElementById('mobile-cart-total-bar');
+  if (mobileBar) {
+    if (count === 0) {
+      mobileBar.classList.add('hidden');
+    } else {
+      mobileBar.classList.remove('hidden');
+      if (mobileCount)    mobileCount.textContent    = count + (count === 1 ? ' item' : ' items');
+      if (mobileTotalBar) mobileTotalBar.textContent = '£' + cartTotal().toFixed(2);
+    }
+  }
+
   if (cart.length === 0) {
     el.innerHTML = '<p class="cart-empty">🛒 Your basket is empty.<br>Add items from the menu below.</p>';
     if (checkoutBtn) checkoutBtn.disabled = true;
@@ -354,6 +368,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('order-form')
     ?.addEventListener('submit', submitOrder);
+
+  document.getElementById('mobile-cart-bar-btn')
+    ?.addEventListener('click', () => {
+      document.querySelector('.order-cart-col')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 
   // Default: collection selected
   setOrderType('Collection');

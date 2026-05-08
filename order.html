@@ -1,15 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Online | The Big Fat Greek</title>
-  <meta name="description" content="Order authentic Greek food online from The Big Fat Greek in Hull. Build your basket and place your order for collection or delivery.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Online | The Big Fat Greek</title>
+    <meta
+      name="description"
+      content="Order authentic Greek food online from The Big Fat Greek in Hull. Build your basket and place your order for collection or delivery."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <!--
+    <!--
     ═══════════════════════════════════════════════════
     EMAILJS SETUP (required for order submissions)
     ═══════════════════════════════════════════════════
@@ -27,175 +33,264 @@
          YOUR_TEMPLATE_ID →  from Email Templates
     ═══════════════════════════════════════════════════
   -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init('YOUR_PUBLIC_KEY');</script>
-</head>
-<body class="order-page">
-
-  <!-- ── NAVIGATION ── -->
-  <nav class="nav">
-    <a href="index.html" class="nav-logo">
-      <img src="assets/logo.png" alt="The Big Fat Greek logo">
-      <div class="nav-logo-text-wrap" style="display:none; flex-direction:column;">
-        <span class="nav-logo-text">The Big Fat Greek</span>
-        <span class="nav-logo-tagline">Authentic Greek Food</span>
-      </div>
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="order.html" class="nav-order-btn">Order Now</a></li>
-    </ul>
-  </nav>
-
-  <!-- ── PAGE HERO ── -->
-  <div class="page-hero">
-    <h1>Order Online</h1>
-    <p>Add items to your basket, then fill in your details and we'll confirm by phone.</p>
-  </div>
-
-  <!-- ── PHONE BANNER ── -->
-  <div class="order-phone-banner">
-    Prefer to call? We're ready: <a href="tel:01482480433">01482 480433</a>
-  </div>
-
-  <!-- ── ORDER LAYOUT ── -->
-  <div class="order-layout">
-
-    <!-- LEFT: Menu -->
-    <div class="order-menu-col">
-
-      <!-- Category quick-nav -->
-      <div class="menu-sticky-nav" style="position:sticky; top:72px; margin-bottom:24px;">
-        <div class="menu-nav-inner" id="order-tabs">
-          <!-- Populated by cart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init('YOUR_PUBLIC_KEY');
+    </script>
+  </head>
+  <body class="order-page">
+    <!-- ── NAVIGATION ── -->
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="The Big Fat Greek logo" />
+        <div
+          class="nav-logo-text-wrap"
+          style="display: none; flex-direction: column"
+        >
+          <span class="nav-logo-text">The Big Fat Greek</span>
+          <span class="nav-logo-tagline">Authentic Greek Food</span>
         </div>
-      </div>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="nav-order-btn">Order Now</a></li>
+      </ul>
+    </nav>
 
-      <!-- Menu sections populated by cart.js -->
-      <div id="order-menu-sections"></div>
-
+    <!-- ── PAGE HERO ── -->
+    <div class="page-hero">
+      <h1>Order Online</h1>
+      <p>
+        Add items to your basket, then fill in your details and we'll confirm by
+        phone.
+      </p>
     </div>
 
-    <!-- RIGHT: Cart -->
-    <div class="order-cart-col">
-      <div class="cart-sticky">
+    <!-- ── PHONE BANNER ── -->
+    <div class="order-phone-banner">
+      Prefer to call? We're ready: <a href="tel:01482480433">01482 480433</a>
+    </div>
 
-        <!-- Basket -->
-        <div class="cart-box">
-          <div class="cart-header">
-            <h3>🛒 Your Basket</h3>
-            <div class="cart-badge" id="cart-badge">0</div>
+    <!-- ── ORDER LAYOUT ── -->
+    <div class="order-layout">
+      <!-- LEFT: Menu -->
+      <div class="order-menu-col">
+        <!-- Category quick-nav -->
+        <div
+          class="menu-sticky-nav"
+          style="position: sticky; top: 72px; margin-bottom: 24px"
+        >
+          <div class="menu-nav-inner" id="order-tabs">
+            <!-- Populated by cart.js -->
           </div>
-          <div class="cart-items" id="cart-items">
-            <p class="cart-empty">Your basket is empty.<br>Add items from the menu.</p>
-          </div>
-          <div class="cart-foot">
-            <div class="cart-total-row">
-              <span>Total</span>
-              <span class="cart-total-amount" id="cart-total">£0.00</span>
+        </div>
+
+        <!-- Menu sections populated by cart.js -->
+        <div id="order-menu-sections"></div>
+      </div>
+
+      <!-- RIGHT: Cart -->
+      <div class="order-cart-col">
+        <div class="cart-sticky">
+          <!-- Basket -->
+          <div class="cart-box">
+            <div class="cart-header">
+              <h3>🛒 Your Basket</h3>
+              <div class="cart-badge" id="cart-badge">0</div>
             </div>
-            <button class="cart-clear" id="clear-cart-btn">Clear basket</button>
-            <button class="btn btn-primary" id="checkout-btn" style="width:100%; justify-content:center;" disabled>
-              Proceed to Checkout
-            </button>
-          </div>
-        </div>
-
-        <!-- Checkout panel -->
-        <div class="checkout-panel" id="checkout-panel">
-          <div class="checkout-panel-header">Your Details</div>
-          <div class="checkout-panel-body">
-            <form id="order-form">
-
-              <div class="form-group">
-                <label>Order Type</label>
-                <div class="order-type-toggle">
-                  <button type="button" class="type-btn selected" id="type-Collection" onclick="setOrderType('Collection')">🏃 Collection</button>
-                  <button type="button" class="type-btn" id="type-Delivery" onclick="setOrderType('Delivery')">🚗 Delivery</button>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="o-name">Full Name *</label>
-                <input type="text" id="o-name" name="name" required placeholder="e.g. John Smith">
-              </div>
-
-              <div class="form-group">
-                <label for="o-phone">Phone Number *</label>
-                <input type="tel" id="o-phone" name="phone" required placeholder="e.g. 07700 000000">
-              </div>
-
-              <div class="form-group" id="address-group" style="display:none;">
-                <label for="o-address">Delivery Address *</label>
-                <input type="text" id="o-address" name="address" placeholder="Full delivery address">
-              </div>
-
-              <div class="form-group">
-                <label for="o-notes">Special Instructions</label>
-                <textarea id="o-notes" name="notes" placeholder="Allergies, sauce preferences, anything else…" style="min-height:70px;"></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" id="submit-btn" style="width:100%; justify-content:center;">
-                Place Order
-              </button>
-
-              <p style="text-align:center; font-size:0.8rem; color:#888; margin-top:12px;">
-                We'll call you on the number above to confirm your order.
+            <div class="cart-items" id="cart-items">
+              <p class="cart-empty">
+                Your basket is empty.<br />Add items from the menu.
               </p>
+            </div>
+            <div class="cart-foot">
+              <div class="cart-total-row">
+                <span>Total</span>
+                <span class="cart-total-amount" id="cart-total">£0.00</span>
+              </div>
+              <button class="cart-clear" id="clear-cart-btn">
+                Clear basket
+              </button>
+              <button
+                class="btn btn-primary"
+                id="checkout-btn"
+                style="width: 100%; justify-content: center"
+                disabled
+              >
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
 
-            </form>
+          <!-- Checkout panel -->
+          <div class="checkout-panel" id="checkout-panel">
+            <div class="checkout-panel-header">Your Details</div>
+            <div class="checkout-panel-body">
+              <form id="order-form">
+                <div class="form-group">
+                  <label>Order Type</label>
+                  <div class="order-type-toggle">
+                    <button
+                      type="button"
+                      class="type-btn selected"
+                      id="type-Collection"
+                      onclick="setOrderType('Collection')"
+                    >
+                      🏃 Collection
+                    </button>
+                    <button
+                      type="button"
+                      class="type-btn"
+                      id="type-Delivery"
+                      onclick="setOrderType('Delivery')"
+                    >
+                      🚗 Delivery
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="o-name">Full Name *</label>
+                  <input
+                    type="text"
+                    id="o-name"
+                    name="name"
+                    required
+                    placeholder="e.g. John Smith"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="o-phone">Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="o-phone"
+                    name="phone"
+                    required
+                    placeholder="e.g. 07700 000000"
+                  />
+                </div>
+
+                <div
+                  class="form-group"
+                  id="address-group"
+                  style="display: none"
+                >
+                  <label for="o-address">Delivery Address *</label>
+                  <input
+                    type="text"
+                    id="o-address"
+                    name="address"
+                    placeholder="Full delivery address"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="o-notes">Special Instructions</label>
+                  <textarea
+                    id="o-notes"
+                    name="notes"
+                    placeholder="Allergies, sauce preferences, anything else…"
+                    style="min-height: 70px"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="submit-btn"
+                  style="width: 100%; justify-content: center"
+                >
+                  Place Order
+                </button>
+
+                <p
+                  style="
+                    text-align: center;
+                    font-size: 0.8rem;
+                    color: #888;
+                    margin-top: 12px;
+                  "
+                >
+                  We'll call you on the number above to confirm your order.
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <!-- Also call us -->
+          <div style="margin-top: 20px; text-align: center">
+            <p style="font-size: 0.88rem; color: #666; margin-bottom: 10px">
+              Or call us directly to order:
+            </p>
+            <a
+              href="tel:01482480433"
+              class="btn btn-phone"
+              style="width: 100%; justify-content: center"
+            >
+              📞 01482 480433
+            </a>
           </div>
         </div>
-
-        <!-- Also call us -->
-        <div style="margin-top:20px; text-align:center;">
-          <p style="font-size:0.88rem; color:#666; margin-bottom:10px;">Or call us directly to order:</p>
-          <a href="tel:01482480433" class="btn btn-phone" style="width:100%; justify-content:center;">
-            📞 01482 480433
-          </a>
-        </div>
-
       </div>
     </div>
 
-  </div>
-
-  <!-- ── FOOTER ── -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <span class="footer-brand-name">The Big Fat Greek</span>
-          <p>Authentic Greek street food in the heart of Hull. Grilled meats, warm flatbreads, and flavours that hit every time.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <a href="index.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact</a>
-          <a href="order.html">Order Now</a>
-        </div>
-        <div class="footer-col">
-          <h4>Find Us</h4>
-          <p>📍 1044 Anlaby Road</p>
-          <p>Hull, HU4 7RA</p>
-          <p style="margin-top:14px;">📞 <a href="tel:01482480433">01482 480433</a></p>
-        </div>
+    <!-- ── MOBILE CART BAR ── -->
+    <div class="mobile-cart-bar hidden" id="mobile-cart-bar">
+      <div class="mobile-cart-bar-info">
+        <span class="mobile-cart-bar-count" id="mobile-cart-count"
+          >0 items</span
+        >
+        <span class="mobile-cart-bar-total" id="mobile-cart-total-bar"
+          >£0.00</span
+        >
       </div>
-      <div class="footer-bottom">
-        <p>© 2024 The Big Fat Greek. All rights reserved.</p>
-      </div>
+      <button class="mobile-cart-bar-btn" id="mobile-cart-bar-btn">
+        View Basket
+      </button>
     </div>
-  </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/cart.js"></script>
-</body>
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-brand-name">The Big Fat Greek</span>
+            <p>
+              Authentic Greek street food in the heart of Hull. Grilled meats,
+              warm flatbreads, and flavours that hit every time.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="order.html">Order Now</a>
+          </div>
+          <div class="footer-col">
+            <h4>Find Us</h4>
+            <p>📍 1044 Anlaby Road</p>
+            <p>Hull, HU4 7RA</p>
+            <p style="margin-top: 14px">
+              📞 <a href="tel:01482480433">01482 480433</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 The Big Fat Greek. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
 </html>
