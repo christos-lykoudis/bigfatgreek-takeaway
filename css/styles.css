@@ -741,13 +741,12 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--charcoal);
-    color: var(--white);
+    background: #111827;
     padding: 14px 20px;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.35);
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.5);
     transform: translateY(0);
     transition: transform 0.3s ease;
   }
@@ -757,22 +756,25 @@ footer {
   .mobile-cart-bar-info {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
   }
   .mobile-cart-bar-count {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.65);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
   .mobile-cart-bar-total {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: var(--gold);
+    color: #C8A951;
   }
   .mobile-cart-bar-btn {
-    background: var(--gold);
-    color: var(--charcoal);
+    background: #ffffff;
+    color: #111827;
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 11px 22px;
     font-weight: 700;
     font-size: 0.95rem;
