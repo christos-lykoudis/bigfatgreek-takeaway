@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | The Big Fat Greek</title>
+  <meta name="description" content="Browse the full Big Fat Greek menu. Pita wraps, tortilla wraps, box meals, salads, sides, dips, desserts and drinks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="The Big Fat Greek logo">
+      <div class="nav-logo-text-wrap" style="display:none; flex-direction:column;">
+        <span class="nav-logo-text">The Big Fat Greek</span>
+        <span class="nav-logo-tagline">Authentic Greek Food</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html" class="nav-order-btn">Order Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <h1>Our Menu</h1>
+    <p>Authentic Greek food, freshly prepared. Everything you see below is made with proper ingredients and zero shortcuts.</p>
+  </div>
+
+  <!-- ── STICKY CATEGORY NAV ── -->
+  <div class="menu-sticky-nav">
+    <div class="menu-nav-inner">
+      <button class="menu-tab-btn active" onclick="scrollTo('pita')">Pita Wraps</button>
+      <button class="menu-tab-btn" onclick="scrollTo('tortilla')">Tortilla Wraps</button>
+      <button class="menu-tab-btn" onclick="scrollTo('boxes')">Box Meals</button>
+      <button class="menu-tab-btn" onclick="scrollTo('grill')">Grill Boxes</button>
+      <button class="menu-tab-btn" onclick="scrollTo('extras')">Extras</button>
+      <button class="menu-tab-btn" onclick="scrollTo('salads')">Salads</button>
+      <button class="menu-tab-btn" onclick="scrollTo('sides')">Sides</button>
+      <button class="menu-tab-btn" onclick="scrollTo('dips')">Dips</button>
+      <button class="menu-tab-btn" onclick="scrollTo('desserts')">Desserts</button>
+      <button class="menu-tab-btn" onclick="scrollTo('drinks')">Drinks</button>
+    </div>
+  </div>
+
+  <!-- ── MENU CONTENT ── -->
+  <div class="menu-page-content">
+
+    <!-- PITA WRAPS -->
+    <div class="menu-section" id="pita">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Pita Bread Wraps</div>
+        <p class="menu-section-desc">Authentic Greek wraps packed with flavour, grilled fresh every time. All include tomatoes, onion, fries &amp; sauce choice. Add Feta or Halloumi for £1.50.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Pork Gyros Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">BFG Pork Gyros Wrap (XXL Pita)</span></div></div><div class="menu-item-right"><span class="menu-item-price">£11.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Chicken Gyros Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">BFG Chicken Gyros Wrap (XXL Pita)</span></div></div><div class="menu-item-right"><span class="menu-item-price">£11.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Mix Gyros Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">BFG Mix Gyros Wrap (XXL Pita)</span></div></div><div class="menu-item-right"><span class="menu-item-price">£11.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Pork Souvlaki Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Chicken Souvlaki Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Panseta Pork Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Lamb Souvlaki Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.40</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Kebap Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Greek Sausage Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Bifteki Classic Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Bifteki Chicken Pita Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Halloumi Pita Wrap</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Zucchini Croquets Pita Wrap</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- TORTILLA WRAPS -->
+    <div class="menu-section" id="tortilla">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Tortilla Wraps</div>
+        <p class="menu-section-desc">A lighter wrap option with the same bold Greek flavours. All include tomatoes, onion, fries &amp; sauce choice. Add Feta or Halloumi for £1.50.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Gyros Pork Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Gyros Chicken Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Gyros Mix Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Pork Souvlaki Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Chicken Souvlaki Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Panseta Pork Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Lamb Souvlaki Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.40</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Kebap Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Greek Sausage Wrap</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Halloumi Wrap</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tortilla Zucchini Croquetes Wrap</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- MAIN BOX MEALS -->
+    <div class="menu-section" id="boxes">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Main Box Meals</div>
+        <p class="menu-section-desc">Full Greek meal boxes served with pita bread, fries, dip, and side salad.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Pork Gyros Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Chicken Gyros Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Mix Gyros Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£15.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Pork Souvlaki Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Chicken Souvlaki Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Panseta Pork Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Lamb Souvlaki Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£16.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Kebap Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Greek Sausage Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Classic Bifteki Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Chicken Bifteki Main Box</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Halloumi Main Box</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£14.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- GRILL BOXES -->
+    <div class="menu-section" id="grill">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Grill Main Boxes</div>
+        <p class="menu-section-desc">Bigger grills, bigger flavours, and proper portions made for serious appetites.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Grill Chicken Main Box</span></div><p class="menu-item-sub">Half boneless chicken, fries, dip, salad</p></div><div class="menu-item-right"><span class="menu-item-price">£15.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Souvlaki Mix Main Box</span></div><p class="menu-item-sub">Pork, chicken &amp; lamb souvlaki, halloumi, fries, dip, salad</p></div><div class="menu-item-right"><span class="menu-item-price">£18.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">BFG Mega Mix (Family Box)</span></div><p class="menu-item-sub">Pork &amp; chicken gyros, 2 sausages, 2 kebabs, 2 panseta, 2 fries, Greek salad, large dip</p></div><div class="menu-item-right"><span class="menu-item-price">£40.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- EXTRAS -->
+    <div class="menu-section" id="extras">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Extras</div>
+        <p class="menu-section-desc">Perfect for adding a little extra flavour to your order.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Pork Souvlaki Single Skewer</span></div></div><div class="menu-item-right"><span class="menu-item-price">£3.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Chicken Souvlaki Single Skewer</span></div></div><div class="menu-item-right"><span class="menu-item-price">£3.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Lamb Souvlaki Single Skewer</span></div></div><div class="menu-item-right"><span class="menu-item-price">£3.70</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Kebap Single</span></div></div><div class="menu-item-right"><span class="menu-item-price">£3.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Greek Sausage Single</span></div></div><div class="menu-item-right"><span class="menu-item-price">£3.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Pita Bread</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£1.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- SALADS -->
+    <div class="menu-section" id="salads">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Salads</div>
+        <p class="menu-section-desc">Fresh, vibrant Greek salads made to balance every meal perfectly.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Greek Salad (Horiatiki)</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Chicken Gyros Salad (Caesar Style)</span></div></div><div class="menu-item-right"><span class="menu-item-price">£8.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Rainbow Salad (Politiki)</span><span class="veg-badge">V</span></div><p class="menu-item-sub">Cabbage, carrot, celery, parsley</p></div><div class="menu-item-right"><span class="menu-item-price">£8.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- SIDES -->
+    <div class="menu-section" id="sides">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Sides</div>
+        <p class="menu-section-desc">The perfect add-ons to complete your Greek feast.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Chicken Nuggets (8pcs) &amp; Fries</span></div></div><div class="menu-item-right"><span class="menu-item-price">£5.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Zucchini Croquets (8pcs) &amp; Fries</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£5.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Fries</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£3.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Feta Fries</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£4.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Cheesy Fries</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£4.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Feta with Olive Oil</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£4.00</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- DIPS -->
+    <div class="menu-section" id="dips">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Dips</div>
+        <p class="menu-section-desc">Freshly made Greek dips packed with flavour and perfect for every bite.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tzatziki Dip</span></div></div><div class="menu-item-right"><span class="menu-item-price">£1.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Tirokafteri Dip (Spicy Feta)</span></div></div><div class="menu-item-right"><span class="menu-item-price">£1.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Hummus Dip</span><span class="veg-badge">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">£1.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Greek Sauce Dip</span></div><p class="menu-item-sub">Mustard, mayo, yogurt, lemon</p></div><div class="menu-item-right"><span class="menu-item-price">£1.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="menu-section" id="desserts">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Sweets &amp; Desserts</div>
+        <p class="menu-section-desc">Traditional Greek desserts for the perfect sweet finish.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Baklava</span></div></div><div class="menu-item-right"><span class="menu-item-price">£4.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Kandaifi</span></div></div><div class="menu-item-right"><span class="menu-item-price">£4.50</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="menu-section" id="drinks">
+      <div class="menu-section-header">
+        <div class="menu-section-title">Drinks</div>
+        <p class="menu-section-desc">Classic soft drinks and authentic Greek sodas.</p>
+      </div>
+      <div class="menu-items-grid">
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Soda Can Drinks</span></div></div><div class="menu-item-right"><span class="menu-item-price">£1.20</span><a href="order.html" class="add-btn">Order</a></div></div>
+        <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name-row"><span class="menu-item-name">Loux Greek Soda Drinks</span></div></div><div class="menu-item-right"><span class="menu-item-price">£1.60</span><a href="order.html" class="add-btn">Order</a></div></div>
+      </div>
+    </div>
+
+  </div><!-- end menu-page-content -->
+
+  <!-- ── ORDER CTA ── -->
+  <div class="cta-banner">
+    <h2>Ready to order?</h2>
+    <p>Build your order online or give us a call.</p>
+    <a href="tel:01482480433" class="cta-phone">01482 480433</a>
+    <div class="btn-row">
+      <a href="order.html" class="btn btn-white">Order Online</a>
+      <a href="tel:01482480433" class="btn btn-phone">📞 Call to Order</a>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-name">The Big Fat Greek</span>
+          <p>Authentic Greek street food in the heart of Hull. Grilled meats, warm flatbreads, and flavours that hit every time.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="order.html">Order Now</a>
+        </div>
+        <div class="footer-col">
+          <h4>Find Us</h4>
+          <p>📍 1044 Anlaby Road</p>
+          <p>Hull, HU4 7RA</p>
+          <p style="margin-top:14px;">📞 <a href="tel:01482480433">01482 480433</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 The Big Fat Greek. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function scrollTo(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelectorAll('.menu-tab-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

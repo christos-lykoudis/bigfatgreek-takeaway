@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | The Big Fat Greek</title>
+  <meta name="description" content="Find The Big Fat Greek on Anlaby Road, Hull. Call us on 01482 480433 or send us a message.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="The Big Fat Greek logo">
+      <div class="nav-logo-text-wrap" style="display:none; flex-direction:column;">
+        <span class="nav-logo-text">The Big Fat Greek</span>
+        <span class="nav-logo-tagline">Authentic Greek Food</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="order.html" class="nav-order-btn">Order Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <h1>Get in Touch</h1>
+    <p>Find us on Anlaby Road, give us a call, or send a message — we'd love to hear from you.</p>
+  </div>
+
+  <!-- ── CONTACT GRID ── -->
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- Left: Info -->
+      <div class="contact-info">
+        <h2>Find Us</h2>
+
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <p>Address</p>
+            <strong>1044 Anlaby Road, Hull, HU4 7RA</strong>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <p>Phone</p>
+            <a href="tel:01482480433">01482 480433</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">🏠</div>
+          <div class="contact-text">
+            <p>Location</p>
+            <strong>Hull, East Yorkshire</strong>
+          </div>
+        </div>
+
+        <!-- Call to order box -->
+        <div class="call-box">
+          <div class="contact-icon" style="background:rgba(255,255,255,0.2); flex-shrink:0;">📞</div>
+          <div class="call-box-text">
+            <p>Ready to order? Call us now</p>
+            <a href="tel:01482480433">01482 480433</a>
+          </div>
+        </div>
+
+        <div style="margin-top: 28px;">
+          <a href="order.html" class="btn btn-primary" style="width:100%; justify-content:center;">Order Online Instead</a>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="contact-form-box">
+        <h2>Send a Message</h2>
+        <!--
+          SETUP: Replace the action URL below with your Formspree endpoint.
+          1. Go to https://formspree.io and create a free account
+          2. Create a new form and copy your endpoint URL
+          3. Replace "https://formspree.io/f/YOUR_FORM_ID" with your URL
+        -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" name="first_name" required placeholder="John">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="07700 000000">
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="Your message here…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;" id="contact-submit">
+            Send Message
+          </button>
+          <div id="form-success" style="display:none; margin-top:16px; padding:16px; background:#e8f5e9; border-radius:8px; color:#2e7d32; font-weight:600; text-align:center;">
+            ✅ Message sent! We'll be in touch soon.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── MAP ── -->
+  <div class="map-wrap">
+    <iframe
+      src="https://maps.google.com/maps?q=1044+Anlaby+Road,+Hull,+HU4+7RA&output=embed"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="The Big Fat Greek location map">
+    </iframe>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-name">The Big Fat Greek</span>
+          <p>Authentic Greek street food in the heart of Hull. Grilled meats, warm flatbreads, and flavours that hit every time.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="order.html">Order Now</a>
+        </div>
+        <div class="footer-col">
+          <h4>Find Us</h4>
+          <p>📍 1044 Anlaby Road</p>
+          <p>Hull, HU4 7RA</p>
+          <p style="margin-top:14px;">📞 <a href="tel:01482480433">01482 480433</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 The Big Fat Greek. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Simple Formspree AJAX submission for better UX
+    document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(this.action, {
+          method: 'POST',
+          body: new FormData(this),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          this.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Sorry, something went wrong. Please call us on 01482 480433.');
+      }
+    });
+  </script>
+</body>
+</html>
